@@ -42,13 +42,12 @@ export default {
   },
   computed:{
 
-    counter(){
-      return this.$store.state.counter
-    }
+    
   },
   methods:{
     userlogin(){
-
+      this.$store.dispatch('actlogoff',true)
+      this.$router.push('/')
     },
     cancelForm(){
       this.$router.push('/')

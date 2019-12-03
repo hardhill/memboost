@@ -34,7 +34,7 @@ export default {
   }),
   computed: {
     logined(){
-      return true
+      return this.$store.getters.GET_LOGINED
       }
   }
 };

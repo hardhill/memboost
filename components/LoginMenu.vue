@@ -1,7 +1,7 @@
 
 <template>
   <div>
-    <v-btn class="d-inline" @click="tologin">Вход</v-btn>
+    <v-btn class="d-inline" @click="tologin" v-if="!show">Вход</v-btn>
     <v-menu
       :close-on-content-click="true"
       :nudge-width="200"
@@ -16,7 +16,7 @@
           <v-list-item-icon>
             <v-icon>mdi-exit-to-app</v-icon>
           </v-list-item-icon>
-          <v-list-item-title>Выход</v-list-item-title>
+          <v-list-item-title @click="dologoff">Выход</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-menu>
@@ -41,6 +41,9 @@ export default {
   methods:{
     tologin(){
       this.$router.push('login')
+    },
+    dologoff(){
+      this.$store.dispatch('actlogoff',false)
     }
   }
 }
