@@ -13,7 +13,7 @@
         {{title}}
       </div>
       <v-spacer></v-spacer>
-      <bm-login-menu username="Username U.N." :show="logined"></bm-login-menu>
+      <bm-login-menu :username="username" :show="logined"></bm-login-menu>
     </v-app-bar>
     <v-content>
       <v-container>
@@ -35,7 +35,10 @@ export default {
   computed: {
     logined(){
       return this.$store.getters.GET_LOGINED
-      }
+      },
+    username(){
+      return this.$store.getters.GET_USERNAME
+    }  
   }
 };
 </script>

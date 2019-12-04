@@ -1,6 +1,6 @@
 export const state = () => ({
   counter: 0,
-  username:'Admin',
+  username:'New user',
   logined: false
 })
 
@@ -10,12 +10,18 @@ export const mutations = {
   },
   setlogined(state,data){
     state.logined = data
+  },
+  setusername(state,data){
+    state.username = data
   }
 }
 
 export const getters = {
   GET_LOGINED(state){
     return state.logined
+  },
+  GET_USERNAME(state){
+    return state.username
   }
 }
 

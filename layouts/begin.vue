@@ -1,17 +1,18 @@
 <template>
+  <v-app>
   <div class="fon">
     <div class="panel">
     <nuxt/>
     </div>
   </div>
+  </v-app>
 </template>
 <style scoped>
 
 .fon{
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   display: flex;
   justify-content: center;
-  background-color: chocolate;
+  background-color: rgb(231, 169, 125);
   align-items: center;
   height: 100vh;
 }
