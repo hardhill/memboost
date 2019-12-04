@@ -26,13 +26,22 @@ export default {
   layout: "begin",
   data(){
     return {
-      username: this.$store.state.username,
       valid:false,
       loginRules:{
         req:v=>!!v||'Логин обязателен',
         min:v=>v.length>=5||'Длина логина не менее 5'
       }
       }
+  },
+  computed:{
+    username:{
+      get(){
+        return this.$store.getters.GET_USERNAME
+      },
+      set(value){
+        this.$store.dispatch('actsetusername',value)
+      }
+    }
   },
   methods:{
     userlogin(){

@@ -28,5 +28,9 @@ export const getters = {
 export const actions = {
   actlogoff(context,payload){
     context.commit('setlogined',payload)
+  },
+  actsetusername(context,payload){
+    context.commit('setusername',payload)
   }
+
 }
