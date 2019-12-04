@@ -44,6 +44,7 @@ export default {
     },
     dologoff(){
       this.$store.dispatch('actlogoff',false)
+      
     }
   }
 }

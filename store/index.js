@@ -1,7 +1,11 @@
 export const state = () => ({
   counter: 0,
-  username:'New user',
-  logined: false
+  sessioninfo:{
+    sessionid:0,
+    username:'',
+    logined:false
+  },
+  
 })
 
 export const mutations = {
@@ -9,28 +13,38 @@ export const mutations = {
     state.counter++
   },
   setlogined(state,data){
-    state.logined = data
+    state.sessioninfo.logined = data
   },
   setusername(state,data){
-    state.username = data
+    state.sessioninfo.username = data
+  },
+  clearsession(state){
+    state.sessioninfo = {
+      sessionid:0,
+      username:'',
+      logined:false
+    }
   }
 }
 
 export const getters = {
   GET_LOGINED(state){
-    return state.logined
+    return state.sessioninfo.logined
   },
   GET_USERNAME(state){
-    return state.username
+    return state.sessioninfo.username
   }
 }
 
 export const actions = {
   actlogoff(context,payload){
     context.commit('setlogined',payload)
+    if(!payload)
+    context.commit('clearsession')
+    
   },
   actsetusername(context,payload){
     context.commit('setusername',payload)
   }
-
+  
 }
