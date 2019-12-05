@@ -16,7 +16,7 @@
       <v-card-actions>
         <v-spacer />
         <v-btn text @click="cancelForm">Отменить</v-btn>
-        <v-btn outlined class="ma-4" @click="userlogin">Принять</v-btn>
+        <v-btn outlined class="ma-4" @click="userlogin" :disabled="btn_validator">Принять</v-btn>
       </v-card-actions>
     </v-card>
   </v-row>
@@ -41,6 +41,9 @@ export default {
       set(value){
         this.$store.dispatch('actsetusername',value)
       }
+    },
+    btn_validator(){
+      return !(this.$store.getters.GET_USERNAME.length>4)
     }
   },
   methods:{
