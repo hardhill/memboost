@@ -1,18 +1,19 @@
 <template>
-  <v-row justify="center">
-    <v-col sm="2">
-      Index page
-    </v-col>
-  </v-row>
+<v-app>
+  <AppBar></AppBar>
+  <v-content>
+    <v-container></v-container>
+  </v-content>
+</v-app>
 </template>
 
 <script>
 
-
+import AppBar from '@/components/AppBar'
 export default {
 
   components: {
-
+    AppBar
   }
 }
 </script>
