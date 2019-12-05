@@ -37,7 +37,7 @@ export const getters = {
 }
 
 export const actions = {
-  actlogoff(context,payload){
+  actlogin(context,payload){
     context.commit('setlogined',payload)
     if(!payload)
     context.commit('clearsession')

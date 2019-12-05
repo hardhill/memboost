@@ -43,7 +43,7 @@ export default {
       this.$router.push('login')
     },
     dologoff(){
-      this.$store.dispatch('actlogoff',false)
+      this.$store.dispatch('actlogin',false)
       
     }
   }

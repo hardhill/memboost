@@ -48,8 +48,8 @@ export default {
   },
   methods:{
     userlogin(){
-      this.$store.dispatch('actlogoff',true)
-      this.$router.push('/')
+      this.$store.dispatch('actlogin',true)
+      this.$router.push('/dash')
     },
     cancelForm(){
       this.$router.push('/')

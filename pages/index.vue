@@ -2,7 +2,9 @@
 <v-app>
   <AppBar></AppBar>
   <v-content>
-    <v-container></v-container>
+    <v-container>
+      <h2>Начальная страница</h2>
+    </v-container>
   </v-content>
 </v-app>
 </template>
