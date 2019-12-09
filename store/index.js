@@ -19,7 +19,6 @@ export const mutations = {
     state.sessioninfo.username = data
   },
   clearsession(state){
-    debugger
     state.sessioninfo = {
       sessionid:0,
       username:'',

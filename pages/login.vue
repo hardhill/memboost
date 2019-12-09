@@ -48,6 +48,7 @@ export default {
   },
   methods:{
     userlogin(){
+      
       this.$store.dispatch('actlogin',true)
       this.$router.push('/dash')
     },
