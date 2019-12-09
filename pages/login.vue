@@ -1,9 +1,10 @@
 <template>
   <v-row>
+    <v-form style="padding:15px;" v-model="valid" validation>
     <v-card elevation="10" style="width:420px;">
       <v-card-title style="background-color:#6dd;">Вход</v-card-title>
       <v-card-text>
-        <v-form style="padding:15px;" v-model="valid" validation>
+        
           <v-row>
           <v-text-field prepend-icon="mdi-face" label="Логин" counter type="text" v-model.trim="username" :rules="[loginRules.req,loginRules.min]">
           </v-text-field>
@@ -11,7 +12,7 @@
           <v-row>
             <v-text-field prepend-icon="mdi-lock" label="Пароль" type="password" clearable></v-text-field>
           </v-row>
-        </v-form>
+        
       </v-card-text>
       <v-card-actions>
         <v-spacer />
@@ -19,6 +20,7 @@
         <v-btn outlined class="ma-4" @click="userlogin" :disabled="btn_validator">Принять</v-btn>
       </v-card-actions>
     </v-card>
+    </v-form>
   </v-row>
 </template>
 <script>

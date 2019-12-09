@@ -1,9 +1,9 @@
 <template>
-<v-app>
+<div>
   <AppBar></AppBar>
-  <v-content>
+  <div>
       <v-carousel
-      v-model="model"
+      
       :show-arrows="showArrows"
       :hide-delimiters="hideDelimiters"
       :cycle="cycle"
@@ -13,7 +13,6 @@
       <v-carousel-item
         v-for="ad in ads"
         :key="ad.id"
-       
       >
         <v-sheet
           :color="ad.color"
@@ -25,13 +24,13 @@
             align="center"
             justify="center"
           >
-            <div class="display-3">{{ad.text}}</div>
+            <div class="">{{ad.text}}</div>
           </v-row>
         </v-sheet>
       </v-carousel-item>
     </v-carousel>
-  </v-content>
-</v-app>
+  </div>
+</div>
 </template>
 
 <script>
