@@ -1,9 +1,8 @@
 <template>
 <div>
   <AppBar></AppBar>
-  <div>
+  <div class="c">
       <v-carousel
-      
       :show-arrows="showArrows"
       :hide-delimiters="hideDelimiters"
       :cycle="cycle"
@@ -19,13 +18,11 @@
           height="100%"
           tile
         >
-          <v-row
-            class="fill-height"
-            align="center"
-            justify="center"
-          >
-            <div class="">{{ad.text}}</div>
-          </v-row>
+          <div class="imgadd" :style="'background-image:url(\''+ad.img+'\')'">
+            <div class="fonadd">
+              <div class="textadd">{{ad.text}}</div>
+              </div>
+          </div>
         </v-sheet>
       </v-carousel-item>
     </v-carousel>
@@ -47,20 +44,20 @@ export default {
           {
             id:1,
             text:'Тесты и программы стимуляции когнитивных функций',
-            img:'',
-            color:'yellow darken-2'
+            color:'yellow darken-2',
+            img:'add01.jpg'
           },
           {
             id:2,
             text:'Тренировка мозга для повседневной жизни',
-            img:'',
-            color:'red'
+            color:'red',
+            img:'add02.jpg'
           },
           {
             id:3,
             text:'Развивайте свои когнитивные способности',
-            img:'',
-            color:'orange'
+            color:'orange',
+            img:'add03.jpg'
           },
         ],
        
@@ -71,3 +68,23 @@ export default {
     },
 }
 </script>
+<style scoped>
+.imgadd{
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+.fonadd{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(123, 122, 133, 0.705);
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 4rem;
+}
+.textadd{
+  color: azure;
+  font-size: 5rem;
+}
+</style>

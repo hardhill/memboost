@@ -17,4 +17,7 @@ export default {
 <style>
 /* для того чтоб не было полосы прокутки */
 html { overflow-y: auto; }
+.container{
+  padding: 0px;
+}
 </style>
