@@ -1,12 +1,6 @@
-export default function ({ store, error }) {
+export default function ({ store, redirect }) {
     if (!store.getters.GET_LOGINED) {
-      debugger
-      console.log('Not connected')
-      error({
-        message: 'You are not connected',
-        statusCode: 403
-      })
-    }else{
-      console.log(store.getters.GET_LOGINED)
+      redirect('/login?message=login')
     }
   }
+  

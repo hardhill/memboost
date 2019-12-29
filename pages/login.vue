@@ -50,7 +50,6 @@ export default {
   },
   methods:{
     userlogin(){
-      
       this.$store.dispatch('actlogin',true)
       this.$router.push('/dash')
     },
@@ -61,6 +60,17 @@ export default {
       this.$store.commit('increment')
       console.log(this.$store.state.counter)
     }
+  },
+  mounted(){
+      const {message} = this.$route.query
+      switch (message){
+      case 'login':
+        //this.$message.info('Для начала надо авторизоваться')
+        break
+        case 'logout':
+        //this.$message.success('Вы успешно вышли из системы')
+        break
+      }
   }
 };
 </script>

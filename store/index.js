@@ -5,6 +5,7 @@ export const state = () => ({
     username:'',
     logined:false
   },
+  error:null
   
 })
 

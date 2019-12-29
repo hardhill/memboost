@@ -38,6 +38,7 @@ export default {
   components: {
     AppBar
   },
+  middleware:[],
   data () {
       return {
         ads:[
