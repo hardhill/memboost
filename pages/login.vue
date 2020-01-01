@@ -1,9 +1,9 @@
 <template>
   <v-row>
-    <v-form style="padding:15px;" v-model="valid" validation>
+    <v-form  v-model="valid" validation>
     <v-card elevation="10" style="width:420px;">
       <v-card-title style="background-color:#6dd;">Вход</v-card-title>
-      <v-card-text>
+      <v-card-text style="padding:0px 30px;">
         
           <v-row>
           <v-text-field prepend-icon="mdi-face" label="Логин" counter type="text" v-model.trim="username" :rules="[loginRules.req,loginRules.min]">

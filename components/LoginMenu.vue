@@ -45,6 +45,8 @@ export default {
     dologoff(){
       this.$store.dispatch('actlogin',false)
       
+      this.$router.push('/')
+      
     }
   }
 }
