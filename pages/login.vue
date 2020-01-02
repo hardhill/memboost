@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-form  v-model="valid" validation>
+    <v-form  v-model="valid" validation ref="form">
     <v-card elevation="10" style="width:420px;">
       <v-card-title style="background-color:#6dd;">Вход</v-card-title>
       <v-card-text style="padding:0px 30px;">
@@ -17,7 +17,7 @@
       <v-card-actions>
         <v-spacer />
         <v-btn text @click="cancelForm">Отменить</v-btn>
-        <v-btn outlined class="ma-4" @click="userlogin" :disabled="btn_validator">Принять</v-btn>
+        <v-btn outlined class="ma-4" @click="userlogin" :disabled="!valid">Принять</v-btn>
       </v-card-actions>
     </v-card>
     </v-form>
@@ -43,10 +43,8 @@ export default {
       set(value){
         this.$store.dispatch('actsetusername',value)
       }
-    },
-    btn_validator(){
-      return !(this.$store.getters.GET_USERNAME.length>4)
     }
+    
   },
   methods:{
     userlogin(){

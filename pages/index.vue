@@ -26,6 +26,11 @@
         </v-sheet>
       </v-carousel-item>
     </v-carousel>
+    <div class="adduser">
+      <v-btn color="primary" to="/reg">Хочу стать умнее</v-btn>
+      <p class="adduser-text">Зарегистрируйтесь чтобы приступить к развитию Ваших когнитивных способностей. 
+        Участвуйте в чемпионатах и конкурсах. Повышайте свои результаты. </p>
+    </div>
   </div>
 </div>
 </template>
@@ -87,5 +92,15 @@ export default {
 .textadd{
   color: azure;
   font-size: 5rem;
+}
+.adduser{
+  display: flex;
+  padding: 1rem 0rem;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.adduser-text{
+  margin: 1rem 20%;
 }
 </style>
