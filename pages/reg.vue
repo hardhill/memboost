@@ -2,7 +2,7 @@
   <div>
     <AppBar/>
     <v-row>
-        
+        <v-form ref="form" ></v-form>
     </v-row>
   </div>
 </template>
