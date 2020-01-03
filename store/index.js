@@ -25,6 +25,9 @@ export const mutations = {
       username:'',
       logined:false
     }
+  },
+  setregistration(state,data){
+
   }
 }
 
@@ -46,6 +49,10 @@ export const actions = {
   },
   actsetusername(context,payload){
     context.commit('setusername',payload)
+  },
+  actregistration(context,dataForm){
+    context.commit('setregistration',dataForm)
+    console.log(dataForm)
   }
   
 }
