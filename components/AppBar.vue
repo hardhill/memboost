@@ -9,7 +9,7 @@
           transition="scale-transition"
           width="50"
         />
-        {{title}}
+        <a class="link" href="/">{{title}}</a>
       </div>
       <v-spacer></v-spacer>
       <bm-login-menu :username="username" :show="logined"></bm-login-menu>
@@ -34,3 +34,9 @@ export default {
   }
 }
 </script>
+<style lang="scss" scoped>
+.link{
+  color: white;
+  text-decoration: none;
+}
+</style>
