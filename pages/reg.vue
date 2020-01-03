@@ -81,6 +81,7 @@ export default {
           password: this.controls.password1
         };
         this.$store.dispatch("actregistration", dataForm);
+        this.$router.push('/login')
       }
     }
   }
